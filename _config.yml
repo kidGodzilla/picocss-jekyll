@@ -131,8 +131,10 @@ navigation_header:
   url: /categories/
 - title: Search
   url: /search/
-- title: Fork picocss-jekyll-theme
+- title: Fork
   url: https://github.com/kidgodzilla/picocss-jekyll
+- title: Install
+  url: /installation/
 
 navigation_footer:
 - title: Created by James Futhey
