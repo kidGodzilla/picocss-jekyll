@@ -8,8 +8,6 @@ layout: default
 
   <div class="content">
 
-    <article class="article  article--page  typeset">
-
       {% if paginator.posts %}
         {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
         <h1>{{ collectiondata.title }}</h1>
@@ -20,8 +18,6 @@ layout: default
         {{ content }}
         
       {% endif %}
-
-    </article>
 
     {% include post-list.html %}
 
