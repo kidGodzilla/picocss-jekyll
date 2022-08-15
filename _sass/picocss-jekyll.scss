@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@import 'https://cdnjs.cloudflare.com/ajax/libs/picocss/1.5.3/pico.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/basscss/8.1.0/css/basscss.min.css';
+@import 'https://www.jamesfuthey.com/css/fonts/hk-grotesk/style.css';
+
+:root {
+  --font-family: "HK Grotesk", Inter, "Maven Pro", Oxygen, "Fira sans", Rubik, "Work sans", Nunito, Lora, Poppins, "PT Sans", Raleway, "Avenir next", "Source Sans Pro", system-ui, -apple-system, "Segoe UI",
+  "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --nav-link-spacing-horizontal: 1rem;
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  /*   --primary: hsl(42deg, 78%, 48%);
+  --primary-hover: hsl(42deg, 90%, 32%); */
+  --h4-color: #ff7043;
+  --primary: #f4511e;
+  --primary-hover: #ff5722;
+  --primary-focus: rgba(244, 81, 30, 0.25);
+  --primary-inverse: #fff;
+}
+
+body {
+  background: #fff;
+  /*     background: #11191f; */
+}
+@media screen and (min-width: 992px) {
+  .big {
+    font-size: 64px;
+  }
+  .huge {
+    font-size: 96px;
+  }
+  .max-width-2 .huge {
+    font-size: 64px;
+  }
+}
+.thick {
+  border-width: 4px;
+}
+.bfff {
+  border-color: var(--h1-color);
+}
+
+.icon-circle {
+  border-radius: 50%;
+  height: 39px;
+  width: 39px;
+  color: #fff;
+  background: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-circle:hover {
+  color: var(--primary);
+  background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .icon-circle {
+    background: var(--primary);
+    color: #fff;
+  }
+  .icon-circle:hover {
+    color: var(--primary);
+    background: #fff;
+  }
+}
+[data-theme="dark"] {
+  .icon-circle {
+    background: var(--primary);
+    color: #fff;
+  }
+  .icon-circle:hover {
+    color: var(--primary);
+    background: #fff;
+  }
+}
+
+[data-theme="light"] .icon-circle {
+  color: #fff;
+  background: var(--primary);
+}
+[data-theme="light"] .icon-circle:hover {
+  background: #fff;
+  color: var(--primary);
+}
+
+@media screen and (max-width: 40em) {
+  .xs-center {
+    float: none;
+    text-align: center;
+  }
+}
+
+.hover-label {
+  opacity: 0;
+  transition: all 280ms ease;
+  background: #fff;
+  display: block;
+  width: calc(100% - 1rem);
+  left: 0;
+  border-radius: 5px;
+  transform: translateY(-50%);
+}
+.hover-label a {
+  font-weight: 600;
+}
+.hoverable {
+  cursor: pointer;
+  overflow: hidden;
+}
+.hoverable:hover .hover-label {
+  transform: translateY(-100%) translateY(-1rem);
+  opacity: 1
+}
