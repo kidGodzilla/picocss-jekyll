@@ -3,7 +3,7 @@
   <ul>
     <li>
       <a href="/">
-        {% if site.logo %}{% include site-logo.html %}{% endif %}
+        {% if site.logo %}{% include site-logo.html %}{% else %}{{ site.title }}{% endif %}
       </a>
     </li>
   </ul>
