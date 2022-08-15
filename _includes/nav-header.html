@@ -1,5 +1,4 @@
 <nav class="nav  nav--header">
-  {% if site.navigation_header %}
   <ul>
     <li>
       <a href="/">
@@ -7,6 +6,8 @@
       </a>
     </li>
   </ul>
+
+  {% if site.navigation_header %}
   <ul class="list  list--nav">
     {% for item in site.navigation_header %}
 
@@ -21,6 +22,7 @@
       </li>
     {% endfor %}
   </ul>
+  {% endif %}
 <!--  <button class="button  button&#45;&#45;nav" aria-label="Menu toggle">-->
 <!--    {% include icon.html id="nav" title="Menu" %}-->
 <!--  </button>-->
