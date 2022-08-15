@@ -12,10 +12,9 @@
   --nav-link-spacing-horizontal: 1rem;
 }
 
+// Theme color
 :root:not([data-theme="dark"]),
 [data-theme="light"] {
-  /*   --primary: hsl(42deg, 78%, 48%);
-  --primary-hover: hsl(42deg, 90%, 32%); */
   --h4-color: #ff7043;
   --primary: #f4511e;
   --primary-hover: #ff5722;
@@ -23,10 +22,17 @@
   --primary-inverse: #fff;
 }
 
-body {
-  //background: #fff;
-  background: #11191f;
+//Background Color
+[data-theme=light] body { background: #fff }
+
+@media only screen and (prefers-color-scheme:dark) {
+  :root:not([data-theme=light]) body { background: #11191f }
 }
+
+[data-theme=dark] {
+  body { background: #11191f }
+}
+
 @media screen and (min-width: 992px) {
   .big {
     font-size: 64px;
