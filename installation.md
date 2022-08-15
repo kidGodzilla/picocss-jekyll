@@ -14,7 +14,7 @@ Pico.css Jekyll is a starting point for [Jekyll](https://jekyllrb.com/) projects
 - Built in **Service Worker** so it can work offline and on slow connections
 - **Configurable colours** and typography in a single settings file
 - Extensive set of **shortcodes** to include various elements; such as buttons, icons, figure images and more
-- Solid **typographic framework** from [Sassline](https://sassline.com/)
+- Solid **css framework** from [Pico.css](https://picocss.com/)
 - Configurable navigation via a single file
 - Modular Jekyll components
 - Post category support in the form of a single post index page grouped by category
@@ -26,11 +26,8 @@ Pico.css Jekyll is a starting point for [Jekyll](https://jekyllrb.com/) projects
 
 ## Examples
 
-Here are a few examples of Alembic out in the wild being used in a variety of ways:
+Here are a few examples of Picocss-jekyll out in the wild being used in a variety of ways:
 
-- [bawejakunal.github.io](https://bawejakunal.github.io/)
-- [case2111.github.io](https://case2111.github.io/)
-- [karateca.org](https://www.karateca.org/)
 
 ## Installation
 
