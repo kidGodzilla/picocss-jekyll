@@ -45,14 +45,14 @@
       if (navList) navList.removeAttribute('style')
     }
 
-    // button.onclick = () => {
-    //   if (navList) navList.style.setProperty('transition', `margin .1s`)
-    //   if (navList && navList.style.getPropertyValue('--listHeight')) {
-    //     navList.style.removeProperty('--listHeight')
-    //   } else {
-    //     if (navList) navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
-    //   }
-    // }
+    button.onclick = () => {
+      if (navList) navList.style.setProperty('transition', `margin .1s`)
+      if (navList && navList.style.getPropertyValue('--listHeight')) {
+        navList.style.removeProperty('--listHeight')
+      } else {
+        if (navList) navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
+      }
+    }
   }
 
   collapseNav()
