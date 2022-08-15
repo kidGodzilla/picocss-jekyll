@@ -1,5 +1,5 @@
-{% if site.navigation_header %}
 <nav class="nav  nav--header">
+  {% if site.navigation_header %}
   <ul>
     <li>
       <a href="/">
@@ -24,10 +24,10 @@
 <!--  <button class="button  button&#45;&#45;nav" aria-label="Menu toggle">-->
 <!--    {% include icon.html id="nav" title="Menu" %}-->
 <!--  </button>-->
-</nav>
-{% else %}
+  {% else %}
   {% include nav-default.html %}
-{% endif %}
+  {% endif %}
+</nav>
 
 <script type="text/javascript">
   // Get list and button

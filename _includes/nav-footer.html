@@ -1,5 +1,4 @@
 {% if site.navigation_footer %}
-<nav class="nav  nav--footer">
   <ul class="list list--nav">
     {% for item in site.navigation_footer %}
 
@@ -14,7 +13,6 @@
       </li>
     {% endfor %}
   </ul>
-</nav>
 {% else %}
   {% include nav-default.html %}
 {% endif %}

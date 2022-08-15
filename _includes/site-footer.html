@@ -1,9 +1,14 @@
-<footer class="footer">
-  <div class="container">
-    <div class="copyright  typeset">
-      <small class="small">&copy; {{ site.title }} {{ site.time | date: '%Y' }}</small>
-    </div>
-
+<footer>
+  <div class="container center">
     {% include nav-footer.html %}
+
+    <ul>
+      <li>
+        <small>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</small>
+      </li>
+      <li>
+        <small>Built with <a href="#" data-tooltip="Ultra-Minimal Personal Homepages">Inter.sh</a></small>
+      </li>
+    </ul>
   </div>
 </footer>
