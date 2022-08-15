@@ -31,23 +31,23 @@
 
 <script type="text/javascript">
   // Get list and button
-  const navList = document.querySelector('.header .list--nav')
-  const button  = document.querySelector('.header .button--nav')
+  const navList = document.querySelector('.nav--header .list--nav')
+  const button  = document.querySelector('.nav--header .button--nav')
 
   // Hide nav and apply toggle
   const collapseNav = () => {
     if (document.body.clientWidth < 640) {
-      navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
+      if (navList) navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
     } else {
-      navList.removeAttribute('style')
+      if (navList) navList.removeAttribute('style')
     }
 
     button.onclick = () => {
-      navList.style.setProperty('transition', `margin .1s`)
-      if (navList.style.getPropertyValue('--listHeight')) {
+      if (navList) navList.style.setProperty('transition', `margin .1s`)
+      if (navList && navList.style.getPropertyValue('--listHeight')) {
         navList.style.removeProperty('--listHeight')
       } else {
-        navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
+        if (navList) navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
       }
     }
   }
