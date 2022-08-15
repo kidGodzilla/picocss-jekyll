@@ -136,7 +136,7 @@ navigation_header:
 - title: Install
   url: /installation/
 
-#navigation_footer:
+navigation_footer:
 #- title: Created by James Futhey
 #  url: https://jamesfuthey.com
 
