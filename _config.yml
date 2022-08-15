@@ -93,7 +93,7 @@ defaults:
 encoding: utf-8 # Make sure the encoding is right
 lang: en-GB # Set the site language
 title: "picocss-jekyll" # Site name or title, also used in jekyll-seo-tag
-logo: "assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
+logo: "/picocss-jekyll/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
 description: "picocss-jekyll is a starting point for Jekyll projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately" # Site description and default description, also used in jekyll-seo-tag
 url: "https://picocss-jekyll.jamesfuthey.com" # Site url, also used in jekyll-seo-tag
 baseurl: ""
@@ -109,27 +109,27 @@ css_inline: true # Will insert all styles into a single <style> block in the <he
 
 # 8. Site favicons & manifest icons
 favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
-  16: 'assets/logos/logo@16px.png'
-  32: 'assets/logos/logo@32px.png'
-  96: 'assets/logos/logo@96px.png'
-  120: 'assets/logos/logo@120px.png'
-  144: 'assets/logos/logo@144px.png'
-  180: 'assets/logos/logo@180px.png'
-  512: 'assets/logos/logo@512px.png'
-  1024: 'assets/logos/logo@1024px.png'
+  16: '/picocss-jekyll/assets/logos/logo@16px.png'
+  32: '/picocss-jekyll/assets/logos/logo@32px.png'
+  96: '/picocss-jekyll/assets/logos/logo@96px.png'
+  120: '/picocss-jekyll/assets/logos/logo@120px.png'
+  144: '/picocss-jekyll/assets/logos/logo@144px.png'
+  180: '/picocss-jekyll/assets/logos/logo@180px.png'
+  512: '/picocss-jekyll/assets/logos/logo@512px.png'
+  1024: '/picocss-jekyll/assets/logos/logo@1024px.png'
 
 # 9. Site navigation
 navigation_header:
 - title: Home
   url: /
 - title: Elements
-  url: /elements/
+  url: /picocss-jekyll/elements/
 - title: Blog
-  url: /blog/
+  url: /picocss-jekyll/blog/
 - title: Categories
-  url: /categories/
+  url: /picocss-jekyll/categories/
 - title: Search
-  url: /search/
+  url: /picocss-jekyll/search/
 - title: Fork picocss-jekyll-theme
   url: https://github.com/kidgodzilla/picocss-jekyll
 
