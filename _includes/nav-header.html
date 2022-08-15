@@ -1,5 +1,12 @@
 {% if site.navigation_header %}
 <nav class="nav  nav--header">
+  <ul>
+    <li>
+      <a href="/">
+        {% if site.logo %}{% include site-logo.html %}{% endif %}
+      </a>
+    </li>
+  </ul>
   <ul class="list  list--nav">
     {% for item in site.navigation_header %}
 
@@ -14,9 +21,9 @@
       </li>
     {% endfor %}
   </ul>
-  <button class="button  button--nav" aria-label="Menu toggle">
-    {% include icon.html id="nav" title="Menu" %}
-  </button>
+<!--  <button class="button  button&#45;&#45;nav" aria-label="Menu toggle">-->
+<!--    {% include icon.html id="nav" title="Menu" %}-->
+<!--  </button>-->
 </nav>
 {% else %}
   {% include nav-default.html %}
