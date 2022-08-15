@@ -54,7 +54,8 @@
         }
     }
 
-    :root:not([data-theme=dark]) .switcher.dark, [data-theme=light] .switcher.dark { display: none }
+    /*:root:not([data-theme=dark]) .switcher.dark, */
+    [data-theme=light] .switcher.dark { display: none }
 
     @media only screen and (prefers-color-scheme:dark) {
         .switcher.light { display: none }
