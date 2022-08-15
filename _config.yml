@@ -66,6 +66,7 @@ collections:
     output: true
     description: "My thoughts and ideas" # The post list page content
     feature_text: |
+      # Blog
       Welcome to the blog
     feature_image: "https://picsum.photos/2560/600?image=866"
 
