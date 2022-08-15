@@ -58,7 +58,7 @@
     [data-theme=light] .switcher.dark { display: none }
 
     @media only screen and (prefers-color-scheme:dark) {
-        .switcher.light { display: none }
+        :root:not([data-theme=light]) .switcher.light { display: none }
     }
 
     [data-theme=dark] {
