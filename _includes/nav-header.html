@@ -2,7 +2,11 @@
   <ul>
     <li>
       <a href="/">
-        {% if site.logo %}{% include site-logo.html %}{% else %}{{ site.title }}{% endif %}
+        {% if site.logo %}
+          {% include site-logo.html %}
+        {% else %}
+          <strong>{{ site.title }}</strong>
+        {% endif %}
       </a>
     </li>
   </ul>
