@@ -137,8 +137,6 @@ navigation_header:
   url: /installation/
 
 navigation_footer:
-- title: Created by James Futhey
-  url: https://jamesfuthey.com
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/kidgdzilla
