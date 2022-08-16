@@ -32,8 +32,8 @@
   {% endif %}
 </nav>
 
+{% if site.navigation_header %}
 <nav class="mobile">
-  {% if site.navigation_header %}
   <ul class="list  list--nav">
     {% for item in site.navigation_header %}
 
@@ -49,6 +49,7 @@
     {% endfor %}
   </ul>
 </nav>
+{% endif %}
 
 <style>
   .button--nav {
