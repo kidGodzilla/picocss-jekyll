@@ -57,20 +57,22 @@
     display: none;
   }
   .mobile--nav { display: none }
-  .mobile--nav li {
-    padding-right: var(--nav-element-spacing-vertical);
-    list-style-type: none;
-    text-align: right;
-  }
-  .mobile--nav .list--nav {
-    overflow: hidden;
-    height: 0;
-  }
   @media screen and (max-width: 640px) {
-    .desktop .list--nav { display: none }
     .mobile--nav { display: flex; justify-content: end; }
+    .desktop .list--nav { display: none }
     .button--nav { display: block }
-    .list--nav {
+
+    .mobile--nav li {
+      padding-right: var(--nav-element-spacing-vertical);
+      list-style-type: none;
+      text-align: right;
+    }
+    .mobile--nav .list--nav {
+      overflow: hidden;
+      height: 0;
+    }
+    .mobile--nav .list--nav {
+      transition: margin .1s ease;
       flex-direction: column;
       align-items: end;
     }
@@ -84,7 +86,7 @@
 
   // Hide nav and apply toggle
   const collapseNav = () => {
-    if (document.body.clientWidth < 640) {
+    if (document.body.clientWidth > 640) {
       if (navList) navList.style.setProperty('height', `initial`)
     } else {
       if (navList) navList.removeAttribute('style')
