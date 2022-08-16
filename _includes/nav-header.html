@@ -58,6 +58,10 @@
   }
   .mobile { display: none }
   .mobile li { list-style-type: none }
+  .mobile .list--nav {
+    height: var(--listHeight, 0);
+    overflow: hidden;
+  }
   @media screen and (max-width: 640px) {
     .desktop .list--nav { display: none }
     .mobile { display: flex; }
