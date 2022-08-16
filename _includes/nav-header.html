@@ -33,7 +33,7 @@
 </nav>
 
 {% if site.navigation_header %}
-<nav class="mobile">
+<div class="mobile">
   <ul class="list  list--nav">
     {% for item in site.navigation_header %}
 
@@ -48,7 +48,7 @@
     </li>
     {% endfor %}
   </ul>
-</nav>
+</div>
 {% endif %}
 
 <style>
@@ -56,29 +56,23 @@
     padding: var(--nav-element-spacing-vertical);
     display: none;
   }
-  nav.mobile {
-    align-items: end;
-    display: none;
-  }
-  nav.mobile li {
-    list-style-type: none;
-  }
+  .mobile { display: none }
+  .mobile li { list-style-type: none }
   @media screen and (max-width: 640px) {
     .desktop .list--nav { display: none }
+    .mobile { display: flex; }
     .button--nav { display: block }
     .list--nav {
       flex-direction: column;
       align-items: end;
     }
-    nav li.item--nav {
-      padding: 0
-    }
+    nav li.item--nav { padding: 0 }
   }
 </style>
 
 <script type="text/javascript">
   // Get list and button
-  const navList = document.querySelector('.nav--header .list--nav')
+  const navList = document.querySelector('.mobile .list--nav')
   const button = document.querySelector('.nav--header .button--nav')
 
   // Hide nav and apply toggle
