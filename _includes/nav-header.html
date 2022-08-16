@@ -1,4 +1,4 @@
-<nav class="nav  nav--header">
+<nav class="nav nav--header desktop">
   <ul>
     <li>
       <a href="/">
@@ -26,16 +26,59 @@
       </li>
     {% endfor %}
   </ul>
-  {% endif %}
-  <button class="button  button--nav" aria-label="Menu toggle">
+  <div class="button  button--nav" aria-label="Menu toggle">
     {% include icon.html id="nav" title="Menu" %}
-  </button>
+  </div>
+  {% endif %}
 </nav>
+
+<nav class="mobile">
+  {% if site.navigation_header %}
+  <ul class="list  list--nav">
+    {% for item in site.navigation_header %}
+
+    {% if item.url contains '://' %}
+    {% assign url = item.url %}
+    {% else %}
+    {% assign url = item.url | relative_url %}
+    {% endif %}
+
+    <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
+      <a href="{{ url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<style>
+  .button--nav {
+    padding: var(--nav-element-spacing-vertical);
+    display: none;
+  }
+  nav.mobile {
+    align-items: end;
+    display: none;
+  }
+  nav.mobile li {
+    list-style-type: none;
+  }
+  @media screen and (max-width: 640px) {
+    .desktop .list--nav { display: none }
+    .button--nav { display: block }
+    .list--nav {
+      flex-direction: column;
+      align-items: end;
+    }
+    nav li.item--nav {
+      padding: 0
+    }
+  }
+</style>
 
 <script type="text/javascript">
   // Get list and button
   const navList = document.querySelector('.nav--header .list--nav')
-  const button  = document.querySelector('.nav--header .button--nav')
+  const button = document.querySelector('.nav--header .button--nav')
 
   // Hide nav and apply toggle
   const collapseNav = () => {
