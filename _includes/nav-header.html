@@ -59,8 +59,8 @@
   .mobile--nav { display: none }
   .mobile--nav li { list-style-type: none }
   .mobile--nav .list--nav {
-    height: var(--listHeight, 0);
     overflow: hidden;
+    height: 0;
   }
   @media screen and (max-width: 640px) {
     .desktop .list--nav { display: none }
@@ -82,17 +82,17 @@
   // Hide nav and apply toggle
   const collapseNav = () => {
     if (document.body.clientWidth < 640) {
-      if (navList) navList.style.setProperty('--listHeight', `initial`)
+      if (navList) navList.style.setProperty('height', `initial`)
     } else {
       if (navList) navList.removeAttribute('style')
     }
 
     button.onclick = () => {
       if (navList) navList.style.setProperty('transition', `margin .1s`)
-      if (navList && navList.style.getPropertyValue('--listHeight')) {
-        navList.style.removeProperty('--listHeight')
+      if (navList && navList.style.getPropertyValue('height')) {
+        navList.style.removeProperty('height')
       } else {
-        if (navList) navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
+        if (navList) navList.style.setProperty('height', `initial`)
       }
     }
   }
