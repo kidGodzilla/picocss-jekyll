@@ -57,7 +57,11 @@
     display: none;
   }
   .mobile--nav { display: none }
-  .mobile--nav li { list-style-type: none }
+  .mobile--nav li {
+    padding-right: var(--nav-element-spacing-vertical);
+    list-style-type: none;
+    text-align: right;
+  }
   .mobile--nav .list--nav {
     overflow: hidden;
     height: 0;
@@ -70,7 +74,6 @@
       flex-direction: column;
       align-items: end;
     }
-    nav li.item--nav { padding: 0; padding-right: var(--nav-element-spacing-vertical) }
   }
 </style>
 
